@@ -55,15 +55,20 @@
     <p>gini = 1 - (x/n)<sup>2</sup> - ((n-x)/n)<sup>2</sup></p>
     <p>entropy = (x / n) * log<sub>10</sub>(n / x) + ((n - x) / n) * log<sub>10</sub>(n / (n - x))</p>
     <p>binary_entropy = (n*0.1) * log<sub>2</sub>(1/(n*0.1)) + (1-(n*0.1)) * log<sub>2</sub>(1/(1-(n*0.1))))</p>
-    <br>
 	<label for="n-input">n: </label>
 	<input type="number" id="n-input">
+    <br>
 	<label for="x-input">x: </label>
 	<input type="number" id="x-input">
+	<div id="result"></div>
+    <br>
 	{% csrf_token %}
 	<button id="gini-button">Gini Calculator</button>
+    <br><br>
 	<button id="entropy-button">Entropy Calculator</button>
+    <br><br>
 	<button id="bientropy-button">Binary Entropy Calculator</button>
-	<div id="result"></div>
+    <br>
+    <br>
 </body>
 </html>
