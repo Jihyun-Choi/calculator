@@ -19,7 +19,7 @@ class CalculatorView(TemplateView):
             gini = 1 - (x / n) ** 2 - ((n - x) / n) ** 2
             result = {'result': gini}
         elif calculator_type == 'entropy':
-            entropy = (x / n) * math.log10(n / x) + ((n - x) / n) * math.log10(n / (n - x))
+            entropy = (x / n) * math.log2(n / x) + ((n - x) / n) * math.log2(n / (n - x))
             result = {'result': entropy}
         elif calculator_type == 'bientropy':
             n = n*0.1
